@@ -1,0 +1,56 @@
+.movies-container {
+    width: 90%;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 2rem;
+    margin: 4rem auto;
+    transition: all 0.3s ease-in;
+}
+
+.sorting {
+    width: 90%;
+    margin: 2rem auto;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.sorting button {
+    display: inline-block;
+    background-color: #333333;
+    color: #fff;
+    margin-right: 1rem;
+    padding: 0.5rem 1.5rem;
+    border: none;
+}
+
+.sorting button:hover {
+    cursor: pointer;
+}
+.sorting button:active {
+    position: relative;
+    top: 1px;
+}
+
+@media screen and (max-width: 1150px) {
+    .movies-container {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+@media screen and (max-width: 900px) {
+    .movies-container {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .movies-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .movies-container {
+        grid-template-columns: 1fr;
+    }
+}
