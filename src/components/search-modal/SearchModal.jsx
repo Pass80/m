@@ -37,21 +37,17 @@ const SearchModal = (props) => {
                     </div>
                 </form>
                 <div className="results-container">
-                    {data ? (
-                        data.map((movie, i) => (
-                            <MovieCard
-                                key={i}
-                                title={movie.title}
-                                year={movie.year}
-                                director={movie.director}
-                                duration={movie.duration}
-                                genre={movie.genre}
-                                rate={movie.rate}
-                            />
-                        ))
-                    ) : (
-                        <h1>No matches found !</h1>
-                    )}
+                    {data?.map((movie, i) => (
+                        <MovieCard
+                            key={i}
+                            title={movie.title}
+                            year={movie.year}
+                            director={movie.director}
+                            duration={movie.duration}
+                            genre={movie.genre}
+                            rate={movie.rate}
+                        />
+                    ))}
                 </div>
             </div>
         </div>
